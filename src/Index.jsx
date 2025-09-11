@@ -5,6 +5,8 @@ import "@fontsource/kumbh-sans";
 import mail from "./assets/mail.png";
 import linkdin from "./assets/linkdin.png";
 import git from "./assets/git.png";
+import pic from "./assets/pic.png";
+import { About } from "./About";
 
 export const Index = () => {
   let imgAnimation = {
@@ -27,7 +29,7 @@ export const Index = () => {
             backgroundColor: "red",
           }}
           animate={{
-            height: "90vh",
+            height: "660px",
             width: "25vw",
             borderRadius: "20px",
             backgroundColor: "black",
@@ -61,7 +63,7 @@ export const Index = () => {
             animate={{
               height: "180px",
               width: "190px",
-              y: -60,
+              y: 0,
               x: -90,
               borderRadius: "15px",
             }}
@@ -70,7 +72,9 @@ export const Index = () => {
               delay: 3.1,
               ease: "easeOut",
             }}
-          ></motion.div>
+          >
+            <img src={pic} alt="Pic" />
+          </motion.div>
 
           <div
             style={{
@@ -134,7 +138,7 @@ export const Index = () => {
           <div
             style={{
               position: "absolute",
-              top: "60%",
+              top: "370px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -152,6 +156,17 @@ export const Index = () => {
                 flexDirection: "column",
               }}
             >
+              <motion.div
+                initial={{ opacity: 0, width: "75%" }}
+                animate={{ opacity: 1, width: ["10%", "50%", "75%"] }}
+                transition={{ delay: 3.1, duration: 5, repeat: Infinity }}
+                style={{
+                  height: "2px",
+                  backgroundColor: "#0637e7",
+                  margin: "20px",
+                  borderRadius: 20,
+                }}
+              ></motion.div>
               <motion.div
                 className="boxcon"
                 initial={{
@@ -226,7 +241,7 @@ export const Index = () => {
                 />
                 <div>
                   <h2>Git:-</h2>
-                  <p>ashwinsharma76@gmail.com</p>
+                  <p>github.com/AshwinSharma76</p>
                 </div>
               </motion.div>
             </div>
@@ -264,7 +279,54 @@ export const Index = () => {
               repeat: Infinity,
             },
           }}
-        ></motion.div>
+        >
+          <div className="headerDiv">
+            <div className="HeaderText">
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 4,
+                  duration: 1.5,
+                }}
+              >
+                About us
+              </motion.h1>
+              <div
+                style={{
+                  marginTop: "8px",
+                  height: 0.5,
+                  width: "50%",
+                  backgroundColor: "blue",
+                  borderRadius: 50,
+                }}
+              ></div>
+            </div>
+            <motion.div
+              className="headerInner"
+              initial={{
+                x: "-1000%",
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                delay: 3.2,
+                duration: 1,
+              }}
+            >
+              <p>About </p>
+              <p>Resume </p>
+              <p>Projects </p>
+              <p>Contact </p>
+            </motion.div>
+          </div>
+          <About />
+        </motion.div>
       </div>
     </>
   );
