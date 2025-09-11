@@ -1,0 +1,68 @@
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+/* Drop (teardrop style) */
+.drop {
+  position: absolute;
+  top: -10;
+  transform: translateX(-50%) rotate(45deg);
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(77, 175, 255, 0.9),
+    rgba(0, 119, 255, 0.7) 70%
+  );
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+/* Glossy reflection */
+.drop::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7),
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+/* Ripple wave */
+.ripple {
+  position: absolute;
+  bottom: 100px;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  filter: blur(10);
+  opacity: 0.1;
+  box-shadow: 0 0 15px rgba(140, 129, 129, 0.5);
+}
+
+.middiv {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: fit-content;
+  color: rgb(143, 173, 206);
+
+  background: transparent;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
