@@ -1,6 +1,6 @@
 .outerMain {
   padding-top: 20px;
-  height: 100%;
+
   width: 100%;
   background-color: transparent;
 }
@@ -76,4 +76,62 @@
   padding-top: 10px;
   text-align: start;
   word-spacing: 5px;
+}
+.skillHead {
+  margin-top: 60px;
+  background-color: transparent;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.skillHead h1 {
+  color: whitesmoke;
+  font-family: "Kumbh Sans", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+
+.gridDivOuter {
+  display: grid;
+  column-gap: 8vw;
+  row-gap: 40px;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .gridDivOuter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gridDivOuter {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}
+
+.grid-items {
+  background-color: #1a1a1d;
+  padding: 30px;
+  height: 110px;
+  width: 110px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.grid-items p {
+  padding-top: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: whitesmoke;
+}
+.grid-items img {
+  width: 80px;
 }
