@@ -10,6 +10,9 @@ import java from "./assets/java.png";
 import hibernate from "./assets/hibernate.png";
 import git from "./assets/gits.png";
 import dsa from "./assets/dsa.png";
+import collage from "./assets/collage.png";
+import hsschool from "./assets/hsschool.png";
+import hschool from "./assets/hschool.png";
 
 import { motion } from "framer-motion";
 export const About = () => {
@@ -22,6 +25,27 @@ export const About = () => {
     { url: hibernate, name: "Hibernate" },
     { url: dsa, name: "DSA" },
     { url: git, name: "Git" },
+  ];
+
+  let education = [
+    {
+      stream: "B.Tech in Computer Science",
+      name: "Mahakal Institute of Technology, Ujjain",
+      date: "2020 - 2024",
+      url: collage,
+    },
+    {
+      stream: "12th ( H.S  School Certificate)",
+      name: "Vinay Adarsh School, Ujjain",
+      date: "2019 – 2020",
+      url: hsschool,
+    },
+    {
+      stream: "10th ( High  School Certificate)",
+      name: "Modern Convent School, Ujjain",
+      date: "2017 – 2018",
+      url: hschool,
+    },
   ];
   return (
     <div className="outerMain">
@@ -201,9 +225,44 @@ export const About = () => {
         </div>
       </motion.div>
 
-      <div style={{ height: 600, width: "100%", backgroundColor: "blue" }}>
-        demo
-      </div>
+      <motion.div
+        className="educationDiv"
+        initial={{ x: -500, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <h1>Education</h1>
+        {education.map((v, i) => {
+          return (
+            <motion.div
+              initial={{
+                x: -500,
+              }}
+              whileInView={{
+                x: 0,
+              }}
+              transition={{ x: { duration: 1, ease: "easeInOut" } }}
+              viewport={{ once: false, amount: 0.3 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 0px 15px 4px rgba(255,255,255,0.8)",
+              }}
+              className="eduSec"
+              key={i}
+            >
+              <div className="eduLogo">
+                <img src={v.url} alt="Collage" />
+              </div>
+              <div className="info">
+                <h2>{v.stream}</h2>
+                <h4>{v.name}</h4>
+                <p>{v.date}</p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </motion.div>
     </div>
   );
 };

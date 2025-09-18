@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./index.css";
 import "@fontsource/kumbh-sans";
@@ -7,13 +7,22 @@ import linkdin from "./assets/linkdin.png";
 import git from "./assets/git.png";
 import pic from "./assets/pic.png";
 import { About } from "./About";
+import { Resume } from "./Resume";
 
 export const Index = () => {
+  let widgets = [<About />, <Resume />];
+  let [value, updatevalue] = useState(0);
+  const head = ["About us", "Resume", "Projects", "Contact"];
+
   let imgAnimation = {
     whileHover: {
       scale: 1.2,
     },
   };
+
+  function changePage(e) {
+    updatevalue(e);
+  }
   return (
     <>
       <div className="mainDiv">
@@ -294,7 +303,7 @@ export const Index = () => {
                   duration: 1.5,
                 }}
               >
-                About us
+                {head[value]}
               </motion.h1>
               <div
                 style={{
@@ -319,13 +328,37 @@ export const Index = () => {
                 duration: 1,
               }}
             >
-              <p>About </p>
-              <p>Resume </p>
-              <p>Projects </p>
-              <p>Contact </p>
+              <motion.p
+                whileHover={{ scale: 1.1, rotate: 3, y: -5 }}
+                onClick={() => changePage(0)}
+                style={value === 0 ? { color: "blue" } : { color: "white" }}
+              >
+                About
+              </motion.p>
+              <motion.p
+                whileHover={{ scale: 1.1, rotate: 3, y: -5 }}
+                onClick={() => changePage(1)}
+                style={value === 1 ? { color: "blue" } : { color: "white" }}
+              >
+                Resume
+              </motion.p>
+              <motion.p
+                whileHover={{ scale: 1.1, rotate: 3, y: -5 }}
+                onClick={() => changePage(2)}
+                style={value === 2 ? { color: "blue" } : { color: "white" }}
+              >
+                Projects
+              </motion.p>
+              <motion.p
+                whileHover={{ scale: 1.1, rotate: 3, y: -5 }}
+                onClick={() => changePage(3)}
+                style={value === 3 ? { color: "blue" } : { color: "white" }}
+              >
+                Contact
+              </motion.p>
             </motion.div>
           </div>
-          <About />
+          {widgets[value]}
         </motion.div>
       </div>
     </>

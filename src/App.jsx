@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       updaten((prev) => {
-        if (prev === 5) {
+        if (prev === 2) {
           clearInterval(interval);
           return prev;
         }
@@ -20,7 +20,7 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  if (n === 5) {
+  if (n === 2) {
     return <Index />;
   } else {
     return <LandingPage />;
