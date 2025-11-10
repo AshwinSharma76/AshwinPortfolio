@@ -33,7 +33,15 @@ export default function Projects() {
           >
             View
           </motion.button>
-          <button>Git</button>
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              backgroundColor: "white",
+              color: "black",
+            }}
+          >
+            Git
+          </motion.button>
         </span>
       </div>
       <div className="prjInfoDiv">
@@ -65,7 +73,15 @@ export default function Projects() {
           >
             View
           </motion.button>
-          <button>Git</button>
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              backgroundColor: "white",
+              color: "black",
+            }}
+          >
+            Git
+          </motion.button>
         </span>
       </div>{" "}
       <div className="prjInfoDiv">
@@ -97,7 +113,15 @@ export default function Projects() {
           >
             View
           </motion.button>
-          <button>Git</button>
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              backgroundColor: "white",
+              color: "black",
+            }}
+          >
+            Git
+          </motion.button>
         </span>
       </div>
     </div>

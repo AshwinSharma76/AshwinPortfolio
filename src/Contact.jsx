@@ -38,7 +38,7 @@ export default function Contact() {
           type="text"
           placeholder="Message"
           minLength={4}
-          maxLength={30}
+          maxLength={60}
         ></textarea>
         <br />
 
