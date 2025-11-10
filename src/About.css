@@ -111,7 +111,7 @@
 
 @media (max-width: 600px) {
   .gridDivOuter {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
