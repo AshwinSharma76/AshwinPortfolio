@@ -8,9 +8,11 @@ import git from "./assets/git.png";
 import pic from "./assets/pic.png";
 import { About } from "./About";
 import { Resume } from "./Resume";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 export const Index = () => {
-  let widgets = [<About />, <Resume />];
+  let widgets = [<About />, <Resume />, <Projects />, <Contact />];
   let [value, updatevalue] = useState(0);
   const head = ["About us", "Resume", "Projects", "Contact"];
 

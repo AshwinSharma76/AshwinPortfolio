@@ -1,0 +1,66 @@
+.Outer {
+  padding-top: 20px;
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  color: white;
+  padding-top: 20px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.prjInfoDiv {
+  background-color: rgb(40, 40, 46);
+  height: fit-content;
+  width: 80%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.prjInfoDiv h1 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+.prjInfoDiv p {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+.techUsed {
+  background-color: transparent;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+}
+.techUsed div {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  background-color: black;
+  width: fit-content;
+  height: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 15px;
+}
+.visitDiv button {
+  background-color: rgb(9, 106, 217);
+  padding: 5px 20px;
+  border-radius: 12px;
+  border: none;
+  color: whitesmoke;
+  margin-left: 10px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+}

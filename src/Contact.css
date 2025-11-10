@@ -1,0 +1,75 @@
+.Outerdiv {
+  padding-top: 20px;
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  color: white;
+  padding-top: 20px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.formDiv {
+  margin-top: 50px;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #323237;
+  width: 40%;
+  padding: 20px 20px;
+  border-radius: 0px 50px 0px 50px;
+}
+
+.formDiv input {
+  font-family: "Kumbh Sans", sans-serif;
+  margin-top: 10px;
+  padding: 5px;
+  width: 90%;
+  color: #323237;
+  font-weight: 700;
+}
+.formDiv textarea {
+  font-family: "Kumbh Sans", sans-serif;
+  margin-top: 10px;
+  padding: 5px;
+  width: 90%;
+  color: #323237;
+  font-weight: 700;
+}
+.formDiv div {
+  background-color: transparent;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.formDiv button {
+  background-color: #0637e7;
+  border: none;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.conInfoDiv {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #323237;
+  display: flex;
+  border-radius: 0px 0px 10px 10px;
+  padding: 20px 20px;
+  width: 40%;
+}
+.emaildiv {
+  background-color: transparent;
+  width: fit-content;
+  margin: 10px;
+  cursor: pointer;
+}
+.numdiv {
+  background-color: transparent;
+  width: fit-content;
+  margin: 10px;
+  cursor: pointer;
+}
