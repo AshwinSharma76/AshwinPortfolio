@@ -13,9 +13,10 @@ import dsa from "./assets/dsa.png";
 import collage from "./assets/collage.png";
 import hsschool from "./assets/hsschool.png";
 import hschool from "./assets/hschool.png";
-
+import pic from "./assets/pic.png";
 import { motion } from "framer-motion";
 import useWindowWidth from "./width";
+
 export const About = () => {
   let wid = useWindowWidth();
   let skillUrl = [
@@ -65,6 +66,30 @@ export const About = () => {
           duration: 0.8,
         }}
       >
+        {wid > 1100 ? null : (
+          <div className="proOuter">
+            <div className="pro">
+              <div className="imgDiv">
+                <img src={pic} alt="img" />
+              </div>
+              <br />
+              <h2>Ashwin Sharma</h2>
+              <br />
+              <p>Full Stack Developer</p>
+              <motion.div
+                initial={{ opacity: 0, width: "75%" }}
+                animate={{ opacity: 1, width: ["10%", "50%", "75%"] }}
+                transition={{ delay: 3.1, duration: 5, repeat: Infinity }}
+                style={{
+                  height: "2px",
+                  backgroundColor: "#0637e7",
+                  margin: "20px",
+                  borderRadius: 20,
+                }}
+              ></motion.div>
+            </div>
+          </div>
+        )}
         <div className="mainDiv">
           <motion.div
             className="intro"

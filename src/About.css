@@ -102,7 +102,47 @@
   padding: 20px;
   grid-template-columns: repeat(3, 1fr);
 }
-
+.proOuter {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pro {
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: transparent;
+  width: 93%;
+  height: fit-content;
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.imgDiv {
+  border-radius: 20px;
+  background-color: transparent;
+  overflow: hidden;
+}
+.imgDiv img {
+  height: 120px;
+  width: 120px;
+}
+.pro h2 {
+  color: whitesmoke;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.pro p {
+  color: whitesmoke;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+}
 @media (max-width: 900px) {
   .gridDivOuter {
     grid-template-columns: repeat(2, 1fr);
