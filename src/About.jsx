@@ -15,7 +15,9 @@ import hsschool from "./assets/hsschool.png";
 import hschool from "./assets/hschool.png";
 
 import { motion } from "framer-motion";
+import useWindowWidth from "./width";
 export const About = () => {
+  let wid = useWindowWidth();
   let skillUrl = [
     { url: html, name: "HTML" },
     { url: css, name: "CSS" },
@@ -225,44 +227,65 @@ export const About = () => {
         </div>
       </motion.div>
 
-      <motion.div
-        className="educationDiv"
-        initial={{ x: -500, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        <h1>Education</h1>
-        {education.map((v, i) => {
-          return (
-            <motion.div
-              initial={{
-                x: -500,
-              }}
-              whileInView={{
-                x: 0,
-              }}
-              transition={{ x: { duration: 1, ease: "easeInOut" } }}
-              viewport={{ once: false, amount: 0.3 }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 0px 15px 4px rgba(255,255,255,0.8)",
-              }}
-              className="eduSec"
-              key={i}
-            >
-              <div className="eduLogo">
-                <img src={v.url} alt="Collage" />
+      {wid > 650 ? (
+        <motion.div
+          className="educationDiv"
+          initial={{ x: -500, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <h1>Education</h1>
+          {education.map((v, i) => {
+            return (
+              <motion.div
+                initial={{
+                  x: -500,
+                }}
+                whileInView={{
+                  x: 0,
+                }}
+                transition={{ x: { duration: 1, ease: "easeInOut" } }}
+                viewport={{ once: false }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 0px 15px 4px rgba(255,255,255,0.8)",
+                }}
+                className="eduSec"
+                key={i}
+              >
+                <div className="eduLogo">
+                  <img src={v.url} alt="Collage" />
+                </div>
+                <div className="info">
+                  <h2>{v.stream}</h2>
+                  <h4>{v.name}</h4>
+                  <p>{v.date}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      ) : (
+        <div className="educationDiv">
+          <h1>Education</h1>
+          {education.map((v, i) => {
+            return (
+              <div className="eduSec" key={i}>
+                <div className="eduLogo">
+                  <img src={v.url} alt="Collage" />
+                </div>
+                <div className="info">
+                  <h2>{v.stream}</h2>
+                  <h4>{v.name}</h4>
+                  <p>{v.date}</p>
+                </div>
               </div>
-              <div className="info">
-                <h2>{v.stream}</h2>
-                <h4>{v.name}</h4>
-                <p>{v.date}</p>
-              </div>
-            </motion.div>
-          );
-        })}
-      </motion.div>
+            );
+          })}
+        </div>
+      )}
+      <br />
     </div>
   );
 };
