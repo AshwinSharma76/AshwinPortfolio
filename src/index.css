@@ -20,6 +20,11 @@ body {
   align-items: center;
   overflow: auto;
 }
+.leftDIv1 {
+  border-radius: 20px;
+  background-color: black;
+  display: block;
+}
 .profileDiv {
   background-color: #323237;
   top: 50px;
@@ -140,4 +145,164 @@ body {
   font-weight: 800;
   color: white;
   font-size: 30px;
+}
+@media (max-width: 1100px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+
+  .mainDiv {
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: #0c0c0c;
+    overflow: auto;
+    align-items: center;
+  }
+  .rightdiv {
+    height: 100%;
+    width: 95%;
+    border-style: solid;
+    box-shadow: 0 0 20px 5px #0637e7;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .rightdiv::-webkit-scrollbar {
+    display: none;
+  }
+  .headerDiv {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .headerInner {
+    background-color: #323237;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+  }
+  .headerDiv div p {
+    color: white;
+    font-size: 20px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .HeaderText {
+    height: 100%;
+    width: 30%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .HeaderText h1 {
+    margin-top: 10px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+
+  .mainDiv {
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: #0c0c0c;
+    overflow: auto;
+    align-items: center;
+  }
+  .rightdiv {
+    height: 100%;
+    width: 95%;
+    border-style: solid;
+    box-shadow: 0 0 20px 5px #0637e7;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .rightdiv::-webkit-scrollbar {
+    display: none;
+  }
+  .headerDiv {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .headerInner {
+    background-color: #323237;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+  }
+  .headerDiv div p {
+    color: white;
+    font-size: 20px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .HeaderText {
+    height: 100%;
+    width: 30%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+  }
+  .HeaderText h1 {
+    margin-top: 10px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 30px;
+  }
 }
