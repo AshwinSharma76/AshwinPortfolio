@@ -7,27 +7,50 @@ export default function Contact() {
     <div className="Outerdiv">
       <br />
       <div className="conInfoDiv">
-        <div className="emaildiv">
-          <h2>Email:</h2>
-          <motion.p
-            whileHover={{
-              color: "#0637e7",
+        <motion.div
+          className="emaildiv"
+          initial={{ x: 500 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }} // x animates once
+        >
+          {/* inner div handles infinite y loop */}
+          <motion.div
+            animate={{ y: [5, 0, 5] }}
+            transition={{
+              delay: 1,
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
-            ashwinsharam76@gmail.com
-          </motion.p>
-        </div>
-        <div className="numdiv">
-          <h2>Phone:</h2>
-          <motion.p
-            whileHover={{
-              color: "#0637e7",
+            <h2>Email:</h2>
+            <motion.p whileHover={{ color: "#0637e7" }}>
+              ashwinsharam76@gmail.com
+            </motion.p>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="emaildiv"
+          initial={{ x: -500 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }} // x animates once
+        >
+          {/* inner div handles infinite y loop */}
+          <motion.div
+            animate={{ y: [5, 0, 5] }}
+            transition={{
+              delay: 1.5,
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
-            +916267095464
-          </motion.p>
-        </div>
+            <h2> Phone::</h2>
+            <motion.p whileHover={{ color: "#0637e7" }}>+916267095464</motion.p>
+          </motion.div>
+        </motion.div>
       </div>
+
       <div className="formDiv">
         <h1>Contact Me</h1>
         <input type="text" placeholder="Name" />
