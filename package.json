@@ -13,6 +13,7 @@
     "@fontsource/balsamiq-sans": "^5.2.6",
     "@fontsource/kumbh-sans": "^5.2.6",
     "@reduxjs/toolkit": "^2.10.1",
+    "axios": "^1.13.2",
     "firebase": "^12.5.0",
     "motion": "^12.23.12",
     "react": "^19.1.1",

@@ -16,6 +16,10 @@ import hschool from "./assets/hschool.png";
 import pic from "./assets/pic.png";
 import { motion } from "framer-motion";
 import useWindowWidth from "./width";
+import springBoot from "./assets/springBoot.png";
+import nodejs from "./assets/nodejs.png";
+import expressjs from "./assets/expressjs.png";
+import mongodb from "./assets/mongodb.png";
 
 export const About = () => {
   let wid = useWindowWidth();
@@ -24,8 +28,12 @@ export const About = () => {
     { url: css, name: "CSS" },
     { url: js, name: "Java Script" },
     { url: react, name: "React.js" },
+    { url: nodejs, name: "Node.js" },
+    { url: expressjs, name: "Express.js" },
+    { url: mongodb, name: "MongoDB" },
     { url: java, name: "Java" },
     { url: hibernate, name: "Hibernate" },
+    { url: springBoot, name: "SpringBoot" },
     { url: dsa, name: "DSA" },
     { url: git, name: "Git" },
   ];

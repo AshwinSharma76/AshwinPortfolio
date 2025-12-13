@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Resume.css";
 import { motion } from "framer-motion";
 import reactjs from "./assets/react.png";
@@ -9,9 +9,19 @@ import java from "./assets/java.png";
 import hibernate from "./assets/hibernate.png";
 import git from "./assets/gits.png";
 import dsa from "./assets/dsa.png";
+import { fetchLatestResumeUrl } from "./Backend/AddFun";
 export let Resume = () => {
   const imgArray = [reactjs, html, css, js, java, hibernate, git, dsa];
+  const [resumeUrl, updateUrl] = useState("");
+  useEffect(() => {
+    const loadResume = async () => {
+      const url = await fetchLatestResumeUrl();
+      updateUrl(url);
+      console.log(url);
+    };
 
+    loadResume();
+  }, []);
   return (
     <div className="resumeOuter">
       <center>
@@ -22,7 +32,19 @@ export let Resume = () => {
           }}
           whileTap={{
             scale: 1.2,
-            x: 700,
+          }}
+          onClick={() => {
+            console.log("helloooo");
+            if (!resumeUrl) {
+              alert("Resume URL not loaded yet!");
+              return;
+            }
+
+            const validUrl = resumeUrl.startsWith("http")
+              ? resumeUrl
+              : "https://" + resumeUrl;
+
+            window.open(validUrl, "_blank", "noopener,noreferrer");
           }}
         >
           Resume

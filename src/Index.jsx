@@ -11,8 +11,10 @@ import { Resume } from "./Resume";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import useWindowWidth from "./width";
+import { useNavigate } from "react-router-dom";
 
 export const Index = () => {
+  let navigate = useNavigate();
   let widgets = [<About />, <Resume />, <Projects />, <Contact />];
   let [value, updatevalue] = useState(0);
   let wid = useWindowWidth();
@@ -124,6 +126,9 @@ export const Index = () => {
                 transition={{
                   delay: 3.1,
                   animation: "easeInOut",
+                }}
+                onDoubleClick={() => {
+                  navigate("/adminLogin");
                 }}
               >
                 Ashwin Sharma
