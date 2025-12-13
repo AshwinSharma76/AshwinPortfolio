@@ -8,7 +8,7 @@ import {
   query,
 } from "firebase/firestore";
 
-import { db } from "./firebase";
+import { db } from "./Firebase";
 
 export const addProjects = async (collectionName, data) => {
   try {
