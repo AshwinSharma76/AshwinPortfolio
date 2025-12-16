@@ -112,13 +112,15 @@ export const About = () => {
               duration: 2,
             }}
           >
-            I’m Ashwin Sharma, a dedicated and curious developer currently
-            pursuing a B.Tech in Computer Science. I have a strong interest in
-            software development and UI/UX design, and I enjoy turning ideas
-            into practical, user-friendly solutions. I’m constantly learning new
-            technologies and improving my skills by working on real-world
-            projects. My goal is to grow as a developer and contribute to
-            meaningful digital experiences in a collaborative environment.
+            I’m Ashwin Sharma, a motivated and detail-oriented software
+            developer with a B.Tech in Computer Science. I have a strong
+            interest in software development and UI/UX design, and I enjoy
+            transforming ideas into practical, user-friendly digital solutions.
+            I continuously work on real-world projects to strengthen my
+            technical skills and stay updated with new technologies. My goal is
+            to grow as a developer while contributing to meaningful and
+            impactful digital experiences within a collaborative team
+            environment.
           </motion.div>
         </div>
         <div className="section1">
